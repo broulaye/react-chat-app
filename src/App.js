@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Sidebar from './components/Sidebar';
+import ChatContainer from './components/ChatContainer';
+
 import './App.css';
 
 class App extends Component {
@@ -29,15 +32,8 @@ class App extends Component {
     return (
       <div className="App">
         <div className="chat-root">
-          <div className="chat-sidebar" sidebar-open={this.state.sidebarOpen.toString()}>
-            <div className="chat-sidebar-header"></div>
-          </div>
-          <div className="chat-container">
-            <div className="chat-container-header">
-              <button type="button" className="chat-list-button" onClick={this.openNav}>Toggle</button>
-            </div>
-            <div className="chat-container-content" onClick={this.closeNav}></div>
-          </div>
+          <Sidebar sidebarOpen={this.state.sidebarOpen.toString()}/>
+          <ChatContainer openNav={this.openNav} closeNav={this.closeNav}/>
         </div>
       </div>
     );

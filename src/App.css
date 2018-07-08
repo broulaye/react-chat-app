@@ -11,81 +11,10 @@
   background: green;
 } */
 
-.chat-container-header {
-  display: flex;
-  direction: row;
-  max-height: 10%;
-  width: auto;
-  flex-grow: 1;
-  background-color: green;
-}
-
-.chat-container-content {
-  display: flex;
-  height: auto;
-  flex-grow: 1;
-  background-color: blue;
-}
-
-.chat-container {
-  display: flex;
-  flex-direction: column;
-  width: auto;
-  flex-grow: 1;
-}
-
 .chat-root {
   display: flex;
   flex-direction: row;
   background-color: blue;
   height: 100%;
   width: 100%;
-}
-
-.chat-sidebar {
-  display: flex;
-  flex-direction: row;
-  width: 25%;
-  background-color: red;
-  height: 100%;
-}
-
-
-.chat-sidebar-header {
-  display: flex;
-  direction: row;
-  max-height: 10%;
-  width: auto;
-  flex-grow: 1;
-  background-color: yellow;
-}
-
-
-.chat-list-button {
-  background-color: yellow;
-  height: 20%;
-  visibility: collapse;
-  position: relative;
-  top: 50%;
-  bottom: 50%;
-  border-style: solid;
-  border-width: 1px;
-}
-
-
-@media (max-width: 640px) {
-  .chat-sidebar {
-    width:0%;
-    transition: 0.5s;
-  }
-
-  .chat-sidebar[sidebar-open='true'] {
-    width: 25%;
-    transition: 0.5s;
-  }
-
-  .chat-list-button {
-    visibility: visible;
-  }
-
 }
