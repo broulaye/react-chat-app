@@ -9,6 +9,7 @@ class ChatContainer extends Component {
       <div className="chat-container">
         <div className="chat-container-header">
           <button type="button" className="chat-list-button" onClick={this.props.openNav}>Toggle</button>
+          <h3>Test</h3>
         </div>
         <div className="chat-container-content" onClick={this.props.closeNav}></div>
       </div>

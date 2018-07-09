@@ -1,29 +1,65 @@
 .chat-sidebar {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 25%;
-  background-color: red;
   height: 100%;
 }
 
 
 .chat-sidebar-header {
+  border-bottom: 1px solid #e0e0e0;
   display: flex;
-  direction: row;
-  max-height: 10%;
-  width: auto;
-  flex-grow: 1;
-  background-color: yellow;
+  flex-direction: row;
+  height: 4.8rem;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 0 0.62rem rgba(0, 0, 0, 0.1);
+}
+
+.user-name {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.user-name > h5 {
+  margin: 0;
+}
+
+.user-name > h3 {
+  margin-bottom: 0;
+}
+
+.chat-sidebar-header > img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.38rem;
+  background: #e0e0e0;
+  margin-top: 6%;
+  margin-left: 10%;
+}
+
+.chat-sidebar-footer {
+  flex: none;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #e0e0e0;
+  height: 3.6rem;
+  width: 100%;
+  margin-top: auto;
 }
 
 @media (max-width: 640px) {
   .chat-sidebar {
     width:0%;
+    visibility: hidden;
     transition: 0.5s;
   }
 
   .chat-sidebar[sidebar-open='true'] {
-    width: 25%;
+    width: 250px;
     transition: 0.5s;
+    visibility: visible;
   }
 }
